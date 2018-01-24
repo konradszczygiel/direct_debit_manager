@@ -1,11 +1,10 @@
 Index page.
-<?php
 <head>
 
 <body>
 <br/><br/>
 <h1>wprowadz nazwe direct debit: </h1>
-<form action="add.php" method="post"  >
+<form action="index.php?action=add" method="post"  >
 <input type="text" name="nazwa_dd" />
 <br/><br/>
 <h2>wprowadz kwote: </h2>
@@ -18,4 +17,3 @@ Index page.
 </form>
 </body>
 </head>
-?>
