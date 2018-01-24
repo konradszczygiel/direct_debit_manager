@@ -17,9 +17,8 @@ require_once 'header.php';
     $fileToLoad = 'pages/' . $action . '.php';
 
     if (file_exists($fileToLoad)) {
-        require_once $fileToLoad;
-        //$content = file_get_contents($fileToLoad);
-        //echo $content;
+        $content = file_get_contents($fileToLoad);
+        echo $content;
     }
 
 ?>
