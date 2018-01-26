@@ -1,5 +1,12 @@
 <?php
 
+if ( isset($_POST['n'])) {
+	$name = $_POST['n'];
+} else {
+	// pusto
+	$name = '';
+
+
 if ( isset($_POST['nazwa_dd'])) {
 	$name = $_POST['nazwa_dd'];
 } else {
@@ -23,4 +30,4 @@ if ( isset($_POST['data_dd'])) {
 }
 
 
-echo 'Nazwa: ' . $name . ' <br> Kwota:  ' . $amount . '<br> Data: ' . $data;
+echo 'Nr.'.$n. 'Nazwa: ' . $name . ' <br> Kwota:  ' . $amount . '<br> Data: ' . $data;
