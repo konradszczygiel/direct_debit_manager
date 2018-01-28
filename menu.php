@@ -11,7 +11,7 @@ $header = '
 		<div class="collapse navbar-collapse" id="navbarCollapse">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="/index.php?action=add">Dodaj nowy <span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="index.php?action=add">Dodaj nowy <span class="sr-only">(current)</span></a>
 				</li>
 			</ul>
 			<form class="form-inline mt-2 mt-md-0" method="post" action="index.php?action=search">

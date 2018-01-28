@@ -12,6 +12,8 @@ require_once 'header.php';
 
 <?php
 
+    $action = 'index';
+
     $action = isset($_GET['action']) ? $_GET['action'] : 'index';
 
     $fileToLoad = 'pages/' . $action . '.php';
@@ -23,7 +25,6 @@ require_once 'header.php';
 ?>
 
 </main>
-
 
 <?php require_once 'footer.php'; ?>
 

@@ -1,22 +1,30 @@
-<br/><br/>
-<h1>wprowadz nazwe direct debit: </h1>
-<br/><br/>
+<?php
 
-<if input type=submit value="Add new direct debit " />
+// pobieranie danych z json
+
+$json_data = file_get_contents('data.txt');
+
+$directDebits = json_decode($json_data, $assoc = true);
+
+
+foreach ($directDebits as $directDebit)
 {
-<for ($n=0;$n<=1000;$n++)
-<form action="index.php?action=add" method="post"  >
-    <input type="text" name="nazwa_dd" />
-    <br/><br/>
-    <h2>wprowadz kwote: </h2>
-    <input type="text" name="kwota_dd" />
-    <br/><br/>
-    <h3>wprowadz date: </h3>
-    <input type="text" name="data_dd" />
-    <br/><br/>
-    <input type=submit value="Add new direct debit " />
+
+    $name = $directDebit['name'];
+    $amount = $directDebit['amount'];
+    // tu dopisze  i data
+
+    ?>
+
+    <p>
+        Name: <b><?php echo $name ?></b>  Amount: <b><?php echo $amount ?> </b>
+    </p>
+
+    <?php
+
+
+
 }
-    <else {input type=submit value="save and show all direct debits " />
-        <echo 'Nr.'.$n. 'Nazwa: ' . $name . ' <br> Kwota:  ' . $amount . '<br> Data: '/> . $data;
-}
-  
+
+
+?>

@@ -1,33 +1,55 @@
 <?php
 
-if ( isset($_POST['n'])) {
-	$name = $_POST['n'];
-} else {
-	// pusto
-	$name = '';
 
+if ( isset($_POST['name']) ){
 
-if ( isset($_POST['nazwa_dd'])) {
-	$name = $_POST['nazwa_dd'];
-} else {
-	// pusto
-	$name = '';
+	// pobieramy dane z pliki, to jest json
+	$saved_json_data = file_get_contents('data.txt');
+
+	// zamienamy json na tablice
+	$saved_data = json_decode($saved_json_data, $asoc = true);
+
+	// dane od użytkownika
+	$data = [$_POST];
+
+	// w new_data łączymy, dane zapisane z danymi użykownika, to jest tablica
+	$new_data = array_merge($saved_data, $data);
+
+	// zamieniamy wszyktie dane( tablica ) na json
+	$json_data = json_encode($new_data);
+
+	// zapsisujemy połączone dane to pliku
+	$status = file_put_contents('data.txt',$json_data);
+
+	if ( $status !== false ) {
+
+		header('location: index.php');
+
+	} else {
+		die("coś się nie udało");
+	}
 }
 
-
-if ( isset($_POST['kwota_dd'])) {
-	$amount = $_POST['kwota_dd'];
-} else {
-	// pusto
-	$amount = '';
-}
-
-if ( isset($_POST['data_dd'])) {
-	$data = $_POST['data_dd'];
-} else {
-	// pusto
-	$data = '';
-}
+?>
 
 
-echo 'Nr.'.$n. 'Nazwa: ' . $name . ' <br> Kwota:  ' . $amount . '<br> Data: ' . $data;
+<form method="post" action="/index.php?action=add">
+
+	<table class="table">
+		<tr>
+			<td>Name</td>
+			<td><input name="name" type="text"></td>
+		</tr>
+		<tr>
+			<td>Amount</td>
+			<td><input name="amount" type="text"></td>
+		</tr>
+		<tr></tr>
+		<tr></tr>
+		<tr>
+			<td><input type="submit" value="Add"> </td>
+			<td></td>
+		</tr>
+	</table>
+
+</form>
