@@ -1,0 +1,1 @@
+[{"name":"jeszcze jeden","amount":"100"},{"name":"kolejny","amount":"300"},{"name":"dom","amount":"9350"},{"name":"Samoch\u00f3d","amount":"13"},{"name":"ubiezpieczenie na psa","amount":"577"}]
