@@ -14,21 +14,22 @@ foreach ($directDebits as $directDebit)
     $amount = $directDebit['amount'];
     $data =   $directDebit['data']
     // tu dopisze  i data
-if $data=1
+
+if ($data==1)
 {
-    $f=st
+    $f="st"
 }
 else 
     {
-    if $data=2 {
-        $f=nd
+    if ($data==2) {
+        $f="nd"
     }
     else {
-        if data=3 {
-            $f=rd        
+        if ($data==3) {
+            $f="rd"        
         }
         else {
-            $f=th
+            $f="th"
         }
 
     }
