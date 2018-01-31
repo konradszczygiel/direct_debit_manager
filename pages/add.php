@@ -4,10 +4,16 @@
 if ( isset($_POST['name']) ){
 
 	// pobieramy dane z pliki, to jest json
-	$saved_json_data = file_get_contents('direct_debit_manager/data.txt');
+	$saved_json_data = file_get_contents('data.txt');
 
 	// zamienamy json na tablice
 	$saved_data = json_decode($saved_json_data, $asoc = true);
+
+	if (empty($saved_data)) {
+		$saved_data = [];
+	}
+
+	$_POST['id'] = uniqid("dd");
 
 	// dane od użytkownika
 	$data = [$_POST];
@@ -19,7 +25,7 @@ if ( isset($_POST['name']) ){
 	$json_data = json_encode($new_data);
 
 	// zapsisujemy połączone dane to pliku
-	$status = file_put_contents('direct_debit_manager/data.txt',$json_data);
+	$status = file_put_contents('data.txt',$json_data);
 
 	if ( $status !== false ) {
 
@@ -33,12 +39,13 @@ if ( isset($_POST['name']) ){
 ?>
 
 
-<form method="post" action="direct_debit_manager/index.php?action=add">
+<form method="post" action="index.php?action=add">
 
 	<table class="table">
 		<tr>
 			<td>Name</td>
 			<td><input name="name" type="text"></td>
+			<td>EDIT</td>
 		</tr>
 		<tr>
 			<td>Amount</td>

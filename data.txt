@@ -1,1 +1,1 @@
-[{"name":"jeszcze jeden","amount":"100"},{"name":"kolejny","amount":"300"},{"name":"dom","amount":"9350"},{"name":"Samoch\u00f3d","amount":"13"},{"name":"ubiezpieczenie na psa","amount":"577"}]
+[{"name":"tv licence","amount":"12.60","date":"13","id":"dd5a722b4347bdc"},{"name":"mortage","amount":"300","date":"1","id":"dd5a722ba21209c"},{"name":"syjh","amount":"12","date":"34","id":"dd5a722c41cf78a"},{"name":"tv licence","amount":"12.60","date":"13","id":"dd5a722ca6a75ff"}]
