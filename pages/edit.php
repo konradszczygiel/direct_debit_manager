@@ -77,8 +77,7 @@ foreach ($directDebits as $directDebit)
     <tr>;
     <td>With day of each month you make paymant</td>
     <td><input name="date" type="text"> </td>
-    
-    </tr>
+        </tr>
     <tr></tr>
     <tr>
         <td><input type="submit" value="Save Edit"> </td>
