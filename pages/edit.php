@@ -93,11 +93,10 @@ $saved_json_data = file_get_contents('data.txt');
 $saved_data = json_decode($saved_json_data, $asoc = true);
 
 //przypisuje to samo ID aby ja zapisac w tablicy
- $id_dd= name="id" type="text";
+  $nn_data=$n_data,$id_dd;
 
-
-// w new_data łączymy, dane zapisane z danymi użykownika, to jest tablica
-$new_data = array_merge($saved_data, $n_data,$id_dd);
+// w new_data łączymy, dane zapisane z danymi użykownika i starym ID
+$new_data = array_merge($saved_data, $nn_data,);
 
 // zamieniamy wszyktie dane( tablica ) na json
 $json_data = json_encode($new_data);
