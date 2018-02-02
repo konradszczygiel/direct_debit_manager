@@ -85,6 +85,7 @@ foreach ($directDebits as $directDebit)
     </tr>
 </table>
 <?php
+//aa
 // pobieramy dane z plikijson
 $saved_json_data = file_get_contents('data.txt');
 
