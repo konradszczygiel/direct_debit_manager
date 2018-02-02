@@ -105,13 +105,13 @@ $json_data = json_encode($new_data);
 $status = file_put_contents('data.txt',$json_data);
 
 // powinienem przejsc do indec.php
-if ( $status !== false ) {
+if ( $status !== false ) 
+{
 
     header('location: index.php');
 
-} else {
+}
+ else {
     die("coś się nie udało");
 }
-
-
-    ?>
+?>
