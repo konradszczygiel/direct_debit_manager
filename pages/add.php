@@ -45,8 +45,7 @@ if ( isset($_POST['name']) ){
 		<tr>
 			<td>Name</td>
 			<td><input name="name" type="text"></td>
-			<td>EDIT</td>
-		</tr>
+					</tr>
 		<tr>
 			<td>Amount</td>
 			<td><input name="amount" type="text"></td>
