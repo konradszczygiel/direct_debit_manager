@@ -39,13 +39,13 @@ if ( isset($_POST['name']) ){
 ?>
 
 
-<form method="post" action="index.php?action=add">
+<form method="POST" action="index.php?action=add">
 
 	<table class="table">
 		<tr>
 			<td>Name</td>
 			<td><input name="name" type="text"></td>
-					</tr>
+        </tr>
 		<tr>
 			<td>Amount</td>
 			<td><input name="amount" type="text"></td>
